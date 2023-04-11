@@ -1,17 +1,20 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'Models/models_name.dart';
+import 'Models/posts_model.dart';
 
-class HomeScreen extends StatefulWidget {
+class ExampleOne extends StatefulWidget {
   final String title;
-  const HomeScreen({required this.title, super.key});
+  const ExampleOne({required this.title, super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ExampleOne> createState() => _ExampleOneState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ExampleOneState extends State<ExampleOne> {
+  //
+  //
+  //
   List<PostsModel> postList = [];
   final String url = 'https://jsonplaceholder.typicode.com/posts';
   Future<List<PostsModel>> getPostApi() async {
